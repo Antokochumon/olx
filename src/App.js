@@ -25,7 +25,7 @@ function App() {
     <div>
    <Post>
 
-       <Router>
+       <Router basename="/olx">
         <Route exact path='/'>
             <Home />
         </Route>
