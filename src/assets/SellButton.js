@@ -1,13 +1,15 @@
-import React from 'react'
+import React from 'react';
 
- export default function SellButton() {
-    return(<svg
+export default function SellButton() {
+  return (
+    <div style={{ backgroundColor: 'grey', display: 'inline-block', padding: '4px', borderRadius: '8px' }}>
+      <svg
         width={104}
         height={48}
         viewBox="0 0 1603 768"
         className="_3V9PS"
       >
-        <g>
+        <g fill="white">
           <path
             className="all"
             d="M434.442 16.944h718.82c202.72 0 367.057 164.337 367.057 367.058s-164.337 367.057-367.057 367.057h-718.82c-202.721 0-367.058-164.337-367.058-367.058s164.337-367.058 367.058-367.058z"
@@ -25,5 +27,7 @@ import React from 'react'
             d="M1473.479 124.453l-55.855 9.91-10.307 47.76c61.844 53.929 95.92 125.617 95.92 201.88 0 25.235-3.772 50.26-11.214 74.363-38.348 124.311-168.398 211.129-316.262 211.129h-448.812l25.121 40.783-25.121 40.783h448.812c190.107 0 357.303-111.638 406.613-271.498 9.572-31.009 14.423-63.162 14.423-95.559 0-98.044-43.805-190.216-123.317-259.551z"
           />
         </g>
-      </svg>)
+      </svg>
+    </div>
+  );
 }

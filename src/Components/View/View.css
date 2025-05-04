@@ -1,50 +1,103 @@
 .viewParentDiv {
   padding-top: 4em;
   display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+ 
 }
+
 .viewParentDiv .imageShowDiv {
   padding: 16px;
-  width: 70vw;
+  flex: 1 1 60%;
+  max-width: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
+
 .viewParentDiv .imageShowDiv img {
-  width: 65vw;
-  height: 85vh;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: contain;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 .viewParentDiv .rightSection {
+  flex: 1 1 30%;
+  min-width: 300px;
+  max-width: 400px;
   padding: 16px;
   margin-top: 3em;
-  width: 30vw;
 }
 
-.viewParentDiv .rightSection .productDetails :first-child {
-  font-weight: 700;
-  margin-bottom: 8px;
-  color: #002f34;
-  font-size: 34px;
-  line-height: 32px;
-  margin-bottom: 20px;
-}
-
-.viewParentDiv .rightSection .productDetails {
-  border: 1px solid black;
-  padding: 6px;
-  border-radius: 6px;
+.productDetails,
+.contactDetails {
+  border: 1px solid #ccc;
+  padding: 12px;
+  border-radius: 8px;
   margin-bottom: 2em;
-  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
 }
 
-.viewParentDiv .rightSection .contactDetails {
-  border: 1px solid black;
-  padding: 6px;
-  border-radius: 6px;
-}
-
-.viewParentDiv .rightSection .contactDetails :first-child {
-  font-size: 20px;
-  line-height: 24px;
+.productDetails p:first-child {
   font-weight: 700;
-  color: #002f34;
-  font-weight: 400;
-  padding: 0;
+  color: red;
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.productDetails span,
+.productDetails p {
+  font-size: 16px;
+  color: green;
+  margin: 4px 0;
+}
+
+.contactDetails p:first-child {
+  font-size: 18px;
+  font-weight: 700;
+  color: red;
+  margin-bottom: 8px;
+}
+
+.contactDetails p {
+  font-size: 16px;
+  color: blue;
+  margin: 4px 0;
+}
+
+/* ✅ Responsive Styles */
+@media only screen and (max-width: 768px) {
+  .viewParentDiv {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .viewParentDiv .imageShowDiv {
+    width: 90vw;
+    padding: 12px;
+  }
+
+  .viewParentDiv .imageShowDiv img {
+    height: auto;
+    max-height: 400px;
+  }
+
+  .viewParentDiv .rightSection {
+    width: 90vw;
+    margin-top: 1em;
+  }
+
+  .productDetails p:first-child {
+    font-size: 24px;
+  }
+
+  .contactDetails p:first-child {
+    font-size: 16px;
+  }
 }

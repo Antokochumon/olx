@@ -1,32 +1,109 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ 
+}
+
+/* Card styling */
 .centerDiv {
-    border: 1px solid black;
-    width: max-content;
-    padding: 50px;
-    position: absolute;
-    top: 65%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 6px;
+  border: none;
+  max-width: 500px;
+  width: 90%;
+  margin: auto;
+  margin-top: 100px;
+  padding: 40px 30px;
+  background: rgb(222, 222, 222);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  position: relative;
+  top: 50%;
+  transform: translateY(10%);
+  animation: fadeInUp 1s ease-out;
+}
+
+/* Smooth entrance animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
   }
-  .input {
-    border-top-color: transparent;
-    border-left-color: transparent;
-    border-right-color: transparent;
-    outline-color: transparent;
+  100% {
+    opacity: 1;
+    transform: translateY(10%);
   }
-  
+}
+
+label {
+  font-size: 14px;
+  color: #333;
+  font-weight: 600;
+  background-color: rgb(222, 222, 222);
+}
+
+.input {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  padding: 10px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+  font-size: 16px;
+  background-color: transparent;
+}
+.rr{
+  background-color: rgb(222, 222, 222);
+}
+
+
+.input:focus {
+  border-bottom-color: #00796b;
+  outline: none;
+  background-color: #f1f1f1;
+}
+
+.uploadBtn {
+  margin-top: 20px;
+  width: 100%;
+  height: 48px;
+  background-color: #00796b;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.uploadBtn:hover {
+  background-color: white;
+  color: #00796b;
+  border: 2px solid #00796b;
+}
+
+input[type="file"] {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+img {
+  margin-top: 10px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive: mobile-first */
+@media screen and (max-width: 600px) {
+  .centerDiv {
+    padding: 20px;
+    top: auto;
+    transform: none;
+    margin-top: 100px;
+  }
+
   .uploadBtn {
-    margin-top: 30px;
-    width: 100%;
-    height: 48px;
-    /* border-color: transparent; */
-    background-color: #002f34;
-    color: whitesmoke;
-    font-weight: 900;
+    height: 44px;
   }
-  .uploadBtn:hover {
-    background-color: white;
-    color: #002f34;
-    border: 2px solid #002f34;
-  }
-  
+}

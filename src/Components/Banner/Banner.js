@@ -1,17 +1,23 @@
-import React from 'react';
-
+import React, { useState } from 'react';
 import './Banner.css';
-import Arrow from '../../assets/Arrow'
+import Arrow from '../../assets/Arrow';
+
 function Banner() {
+  const [showCategories, setShowCategories] = useState(false);
+
+  const handleToggle = () => {
+    setShowCategories(!showCategories);
+  };
+
   return (
-    <div className="bannerParentDiv">
+    <div id='red' className="bannerParentDiv">
       <div className="bannerChildDiv">
         <div className="menuBar">
-          <div className="categoryMenu">
+          <div className="categoryMenu" onClick={handleToggle}>
             <span>ALL CATEGORIES</span>
-            <Arrow></Arrow> 
+            <Arrow />
           </div>
-          <div className="otherQuickOptions">
+          <div className={`otherQuickOptions ${showCategories ? 'show' : ''}`}>
             <span>Cars</span>
             <span>Motorcy...</span>
             <span>Mobile Ph...</span>
@@ -22,13 +28,9 @@ function Banner() {
           </div>
         </div>
         <div className="banner">
-          <img
-            src="../../../Images/banner copy.png"
-            alt=""
-          />
+          <img src="../../../Images/banner copy.png" alt="" />
         </div>
       </div>
-      
     </div>
   );
 }

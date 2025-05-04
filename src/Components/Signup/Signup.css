@@ -1,38 +1,96 @@
+/* Global Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f2f2f2;
+}
+
+/* Signup Container */
 .signupParentDiv {
-    border: 1px solid black;
-    width: max-content;
-    padding: 10px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 6px;
+  max-width: 420px;
+  width: 90%;
+  margin: 30px auto;
+  padding: 30px 25px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+/* Optional Logo Inside Signup Box */
+.signupParentDiv .logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.signupParentDiv .logo img {
+  max-width: 80px;
+}
+
+/* Input Fields */
+.signupParentDiv .input {
+  width: 100%;
+  padding: 12px 10px;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  font-size: 16px;
+  background-color: transparent;
+  transition: border-color 0.3s ease;
+}
+
+.signupParentDiv .input:focus {
+  border-color: #002f34;
+  outline: none;
+}
+
+/* Signup Button */
+.signupParentDiv button {
+  width: 100%;
+  height: 48px;
+  background-color: #002f34;
+  color: whitesmoke;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  margin-top: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.signupParentDiv button:hover {
+  background-color: white;
+  color: #002f34;
+  border: 2px solid #002f34;
+}
+
+/* Links */
+.signupParentDiv a {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  color: #002f34;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.signupParentDiv a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 500px) {
+  .signupParentDiv {
+    padding: 20px 15px;
+    border-radius: 8px;
   }
-  
-  .signupParentDiv .input {
-    border-top-color: transparent;
-    border-left-color: transparent;
-    border-right-color: transparent;
-    outline-color: transparent;
-  }
-  
+
+  .signupParentDiv .input,
   .signupParentDiv button {
-    width: 100%;
-    height: 48px;
-    /* border-color: transparent; */
-    background-color: #002f34;
-    color: whitesmoke;
-    font-weight: 900;
+    font-size: 14px;
   }
-  .signupParentDiv button:hover {
-    background-color: white;
-    color: #002f34;
-    border: 2px solid #002f34;
-  }
-  
-  .signupParentDiv a {
-    display: flex;
-    justify-content: center;
-    cursor: pointer;
-  }
-  
+}

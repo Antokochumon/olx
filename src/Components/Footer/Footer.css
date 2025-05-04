@@ -1,27 +1,152 @@
-.footerParentDiv {
-  width: 100vw;
-}
-.footerParentDiv .content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #ebeeef;
-  padding: 16px;
-}
-.footerParentDiv .content .heading {
-  font-size: 24px;
-  font-weight: bolder;
+/* General Footer Container */
+.footer-container {
+  width: 100%;
+  background: black;
+  color: #333;
+  padding: 40px 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
 }
 
-.footerParentDiv .footer {
+/* Footer Content: Flexbox for Proper Alignment */
+.footer-content {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  background: #002f34;
-  color: whitesmoke;
+  gap: 30px;
+  padding: 0 20px;
+  margin-bottom: 30px;
+  background: black;
 }
 
-.footerParentDiv .footer p {
-  margin: 0;
+.footer-column {
+  flex: 1;
+  min-width: 200px;
+  background-color: black;
+}
+
+.footer-heading {
+  font-size: 18px;
+  font-weight: bold;
+  color: #00eaff;
+  background-color: black;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #00bcd4;
+  padding-bottom: 5px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  background-color: black;
+}
+
+.footer-column ul li {
+  font-size: 14px;
+  color: #ffffff;
+  margin: 8px 0;
+  cursor: pointer;
+  transition: 0.3s;
+  background-color: black;
+}
+
+.footer-column ul li:hover {
+  color: #00bcd4;
+  text-decoration: underline;
+}
+
+/* Footer Bottom Section: Info & Designer */
+.footer-bottom {
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+  padding: 20px;
+  background-color: black;
+  color: #fff;
+}
+
+.footer-country {
+  font-size: 19px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: #00bcd4;
+  background-color: black;
+
+}
+
+.footer-rights {
+  font-size: 17px;
+  margin-bottom: 10px;
+  color: #00bcd4;
+  background-color: black;
+  
+}
+
+
+.footer-designer {
+  font-size: 16px;
+  color: #00bcd4;
+  font-style: italic;
+  background-color: black;
+}
+
+/* Responsive Design for Tablet and Mobile Devices */
+@media (max-width: 1024px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-column {
+    min-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .footer-bottom {
+    padding: 15px 10px;
+  }
+
+  .footer-heading {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .footer-column ul li {
+    font-size: 12px;
+  }
+
+  .footer-country,
+  .footer-rights,
+  .footer-designer {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    padding: 0 15px;
+  }
+
+  .footer-heading {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .footer-column ul li {
+    font-size: 12px;
+  }
+
+  .footer-bottom {
+    padding: 10px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-column ul li {
+    font-size: 12px;
+    margin: 6px 0;
+  }
+
+  .footer-bottom {
+    font-size: 10px;
+  }
 }

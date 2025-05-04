@@ -1,40 +1,78 @@
 .bannerParentDiv {
   padding-top: 4em;
-}
-.bannerParentDiv .bannerChildDiv {
-}
-.bannerParentDiv .bannerChildDiv .menuBar {
-  display: flex;
-  padding: 10px 16px 10px 16px;
+ 
 }
 
-.bannerParentDiv .bannerChildDiv .menuBar span {
+
+.bannerParentDiv .bannerChildDiv .menuBar {
+  display: flex;
+  padding: 10px 16px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background-color: aqua;
+}
+
+.bannerParentDiv .bannerChildDiv .menuBar .categoryMenu {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  background-color: aqua;
+
 }
 
 .bannerParentDiv .bannerChildDiv .menuBar .categoryMenu span {
-  margin-right: 16px;
+  margin-right: 8px;
   font-weight: bolder;
+  
 }
 
 .bannerParentDiv .bannerChildDiv .menuBar .otherQuickOptions {
-}
-.bannerParentDiv .bannerChildDiv .menuBar .otherQuickOptions span {
-  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
+.bannerParentDiv .bannerChildDiv .menuBar .otherQuickOptions span {
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* Banner Image */
 .bannerChildDiv .banner {
   position: relative;
   width: 100vw;
 }
-.bannerChildDiv .banner img{
+.bannerChildDiv .banner img {
   width: 100vw;
+  height: auto;
 }
 
+/* Media Query for Small Devices */
 @media only screen and (max-width: 700px) {
-  .otherQuickOptions {
-    display: none;
+  .bannerParentDiv .bannerChildDiv .menuBar {
+    flex-direction: column;
+    align-items: flex-start;
   }
-  .bannerChildDiv .banner {
-    position: relative;
+
+  .bannerParentDiv .bannerChildDiv .menuBar .otherQuickOptions {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .bannerParentDiv .bannerChildDiv .menuBar .otherQuickOptions.show {
+    display: flex;
+  }
+
+  .bannerParentDiv .bannerChildDiv .menuBar .otherQuickOptions span {
+    padding: 8px 16px;
+    width: 100%;
+    border-top: 1px solid #eee;
   }
 }
+
+
+.bannerParentDiv .bannerChildDiv .menuBar span{
+  background-color: aqua;
+}
+
